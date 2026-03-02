@@ -19,7 +19,7 @@ The visual identity must strike a balance between high-tech competence and an ap
 
 ### 4. Technical Stack & Infrastructure
 
-- **Frontend Framework:** Flutter (deployed as a web application). Standard build output (HTML/Canvas renderer).
+- **Frontend Framework:** Flutter web-only platform. No mobile or desktop deployment required. Standard build output (HTML/Canvas renderer).
 - **Hosting & Deployment:** Self-hosted on local home server (basic machine with 2-4GB RAM)
 - **Web Server:** Nginx running in Docker container for easy management on Linux environment
 - **Domain & Security:** Custom domain (to be acquired via Namecheap) routing through Cloudflare with Cloudflare's own SSL/TLS certificates (Origin Certificate) for secure HTTPS access. For development, use localhost.
@@ -28,7 +28,7 @@ The visual identity must strike a balance between high-tech competence and an ap
 - **Analytics:** None (no visitor tracking)
 
 #### Development Environment Requirements
-- **Flutter SDK:** Managed via fvm (Flutter Version Management)
+- **Flutter SDK:** Managed via fvm (Flutter Version Management) - web-only platform required
 - **Dart SDK:** Included with Flutter (via fvm)
 - **IDE:** VS Code with Flutter extension or Android Studio
 - **Git:** For version control
@@ -109,13 +109,14 @@ Flutter Web offers multiple rendering options. For this project:
    - Organize project screenshots and assets
 
 2. **Phase 2: Flutter Development**
-   - Set up Flutter project structure:
-     - `lib/main.dart` - entry point
-     - `lib/widgets/` - reusable UI components
-     - `lib/pages/` - section widgets (Hero, Competencies, Projects, Experience, Contact)
-     - `assets/` - images, fonts, CV PDF
-     - `web/index.html` - HTML template with SEO meta tags
-     - `pubspec.yaml` - dependencies and asset declarations
+    - Set up Flutter project structure (web-only platform):
+      - Create project: `flutter create --platforms web personal_resume_website`
+      - `lib/main.dart` - entry point
+      - `lib/widgets/` - reusable UI components
+      - `lib/pages/` - section widgets (Hero, Competencies, Projects, Experience, Contact)
+      - `assets/` - images, fonts, CV PDF
+      - `web/index.html` - HTML template with SEO meta tags
+      - `pubspec.yaml` - dependencies and asset declarations
    - Declare assets in `pubspec.yaml` under `assets:` section
    - Build the UI components for all sections using `AssetImage` or `Image.asset()` for images
    - Implement single-page layout with smooth scrolling
