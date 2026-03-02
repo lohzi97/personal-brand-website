@@ -8,7 +8,7 @@ Content is extracted from `docs/CV.md` and `docs/project-portfolio.md`, assets a
 
 ### Task 1.1: Create Flutter Project Structure
 
-**Goal:** Set up base Flutter web-only project with fvm and create directory structure.
+**Goal:** Set up base Flutter web-only project and create directory structure.
 
 **Steps:**
 1. Create Flutter web-only project: `flutter create --platforms web personal_resume_website`
@@ -16,9 +16,11 @@ Content is extracted from `docs/CV.md` and `docs/project-portfolio.md`, assets a
 3. Verify `assets/` contains: `profile.png`, `CV.pdf`, `cammillion-goals.png`, `cammillion-srifactors.png`, `ddone-google-play.jpeg`, `ddone-microsoftstore.png`
 
 **Acceptance Criteria:**
-- [ ] Flutter project created
+- [ ] Flutter project created successfully
 - [ ] `lib/widgets/` and `lib/pages/` directories exist
 - [ ] All assets are present in `assets/`
+- [ ] **Run `flutter run -d chrome` - app launches showing Flutter Demo Home Page without errors**
+- [ ] No console errors or warnings
 
 ---
 
@@ -34,11 +36,13 @@ Content is extracted from `docs/CV.md` and `docs/project-portfolio.md`, assets a
      assets:
        - assets/
    ```
-2. Run `fvm flutter pub get`
+2. Run `flutter pub get`
 
 **Acceptance Criteria:**
 - [ ] Assets declared in pubspec.yaml
-- [ ] `fvm flutter pub get` succeeds
+- [ ] `flutter pub get` succeeds
+- [ ] **Run `flutter run -d chrome` - app launches without asset-related errors**
+- [ ] Hot reload works (press `r` in terminal)
 
 ---
 
@@ -61,7 +65,11 @@ Content is extracted from `docs/CV.md` and `docs/project-portfolio.md`, assets a
 **Acceptance Criteria:**
 - [ ] Profile photo displays
 - [ ] Title and bio from CV.md shown
-- [ ] CV download button works
+- [ ] CV download button present
+- [ ] **Run `flutter run -d chrome` - Hero section displays correctly**
+- [ ] **Profile image loads without errors**
+- [ ] **CV download button is clickable and triggers download**
+- [ ] No console errors
 
 ---
 
@@ -83,6 +91,10 @@ Content is extracted from `docs/CV.md` and `docs/project-portfolio.md`, assets a
 - [ ] All 4 categories displayed
 - [ ] All skills from CV.md Section 5 included
 - [ ] Tags styled consistently
+- [ ] **Run `flutter run -d chrome` - Competencies section displays below Hero**
+- [ ] **All badges render correctly with proper spacing**
+- [ ] **Hot reload works after changes to this section**
+- [ ] No console errors
 
 ---
 
@@ -125,6 +137,11 @@ Content is extracted from `docs/CV.md` and `docs/project-portfolio.md`, assets a
 - [ ] Project images load correctly
 - [ ] Content from project-portfolio.md shown
 - [ ] Tech stack displayed for each project
+- [ ] **Run `flutter run -d chrome` - Projects section displays with all cards**
+- [ ] **All project images load without errors**
+- [ ] **Project cards have consistent layout and styling**
+- [ ] **Link buttons are visible and clickable (even with placeholder URLs)**
+- [ ] No console errors
 
 ---
 
@@ -150,6 +167,11 @@ Content is extracted from `docs/CV.md` and `docs/project-portfolio.md`, assets a
 - [ ] All 3 roles displayed in chronological order
 - [ ] Achievements from CV.md shown as bullet points
 - [ ] Company names link to websites (placeholders)
+- [ ] **Run `flutter run -d chrome` - Experience section displays with timeline**
+- [ ] **All roles show in correct chronological order**
+- [ ] **Bullet points render correctly**
+- [ ] **Company links are clickable (even with placeholder URLs)**
+- [ ] No console errors
 
 ---
 
@@ -164,12 +186,18 @@ Content is extracted from `docs/CV.md` and `docs/project-portfolio.md`, assets a
 2. Display 3 links:
    - Email: `mailto:lohzian@live.com`
    - GitHub: `https://github.com/lohzi97`
-   - LinkedIn: (placeholder)
+   - LinkedIn: `https://www.linkedin.com/in/loh-zi-jian/`
 
 **Acceptance Criteria:**
 - [ ] Email link uses mailto:
 - [ ] GitHub link points to github.com/lohzi97
-- [ ] LinkedIn placeholder present
+- [ ] LinkedIn link points to linkedin.com/in/loh-zi-jian
+- [ ] **Run `flutter run -d chrome` - Contact section displays at bottom**
+- [ ] **Email link opens default email client when clicked**
+- [ ] **GitHub link opens correct GitHub profile**
+- [ ] **LinkedIn link opens correct LinkedIn profile**
+- [ ] **All links are clearly visible and styled**
+- [ ] No console errors
 
 ---
 
@@ -188,6 +216,11 @@ Content is extracted from `docs/CV.md` and `docs/project-portfolio.md`, assets a
 - [ ] All sections render in order
 - [ ] Smooth scrolling works
 - [ ] Color theme consistent
+- [ ] **Run `flutter run -d chrome` - Full page loads with all sections**
+- [ ] **Smooth scrolling between sections works (use wheel/touch)**
+- [ ] **Color theme is consistently Blue, White, Grey, Black**
+- [ ] **All sections are visible without horizontal scrolling**
+- [ ] No console errors
 
 ---
 
@@ -210,6 +243,12 @@ Content is extracted from `docs/CV.md` and `docs/project-portfolio.md`, assets a
 - [ ] Layout adapts at 600px breakpoint
 - [ ] No horizontal scrolling on mobile
 - [ ] Text is readable
+- [ ] **Run `flutter run -d chrome` - Resize browser to 375px width**
+- [ ] **At 375px: Hero content centers, Competencies stack vertically**
+- [ ] **At 375px: Projects show single column, Experience full width**
+- [ ] **At 375px: Contact links stack vertically**
+- [ ] **No horizontal scrolling at any mobile width**
+- [ ] No console errors
 
 ---
 
@@ -227,6 +266,12 @@ Content is extracted from `docs/CV.md` and `docs/project-portfolio.md`, assets a
 - [ ] Desktop layout uses available width
 - [ ] Grid layouts implemented
 - [ ] Spacing is balanced
+- [ ] **Run `flutter run -d chrome` - Resize browser to 1920px width**
+- [ ] **At 1920px: Projects display in 2-3 column grid**
+- [ ] **At 1920px: Competencies display in grid layout**
+- [ ] **At 1920px: Spacing and padding are proportional to screen size**
+- [ ] **No excessive whitespace or cramped content**
+- [ ] No console errors
 
 ---
 
@@ -247,15 +292,19 @@ Content is extracted from `docs/CV.md` and `docs/project-portfolio.md`, assets a
 - [ ] Title tag added
 - [ ] Meta description added
 - [ ] sitemap.xml and robots.txt created
+- [ ] **Run `flutter run -d chrome` - Browser title shows correctly**
+- [ ] **Inspect page source - verify meta tags are present**
+- [ ] **sitemap.xml and robots.txt are accessible via browser dev tools**
+- [ ] No console errors
 
 ---
 
-### Task 4.2: Build & Test Locally
+### Task 4.2: Production Build & Test
 
 **Goal:** Create production build and test locally.
 
 **Steps:**
-1. Build: `fvm flutter build web --release`
+1. Build: `flutter build web --release`
 2. Serve `build/web/` with `python -m http.server 8000`
 3. Test at `http://localhost:8000`
 4. Verify all sections load
@@ -268,6 +317,15 @@ Content is extracted from `docs/CV.md` and `docs/project-portfolio.md`, assets a
 - [ ] All sections load
 - [ ] All links work
 - [ ] Responsive behavior verified
+- [ ] **Build completes without errors**
+- [ ] **Navigate to http://localhost:8000 - all sections render correctly**
+- [ ] **CV download works in production build**
+- [ ] **GitHub link works in production build**
+- [ ] **Email link works in production build**
+- [ ] **LinkedIn link works in production build**
+- [ ] **Test at 375px width - responsive layout works**
+- [ ] **Test at 1920px width - desktop layout works**
+- [ ] **No console errors in production build**
 
 ---
 
@@ -286,7 +344,7 @@ Content is extracted from `docs/CV.md` and `docs/project-portfolio.md`, assets a
 ### Task 5.2: Deployment (For Later)
 
 **Steps:**
-1. Build Flutter web: `fvm flutter build web --release`
+1. Build Flutter web: `flutter build web --release`
 2. Transfer to server: `rsync -avz build/web/ user@server:/path/to/nginx/html/`
 3. Restart Docker: `docker-compose up -d --build`
 4. Configure Cloudflare DNS and SSL (when domain is ready)

@@ -6,6 +6,7 @@ Look, I’m not just here to write lines of code; I’m here to solve your probl
 
 * Email: lohzian@live.com
 * GitHub: github.com/lohzi97
+* LinkedIn: linkedin.com/in/loh-zi-jian/
 * Location: Selangor, Malaysia
 
 
